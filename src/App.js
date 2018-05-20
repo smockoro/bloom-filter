@@ -6,19 +6,29 @@ import InputList from './InputList';
 import CheckForm from './CheckForm';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props)
     this.state = {
-      inputData: "",
-    };
+      inputdata: '',
+    }
+    this.submit = this.submit.bind(this)
+    this.change = this.change.bind(this)
+  }
+
+  change(e) {
+    this.setState({inputData: e.target.value})
+  }
+
+  submit() {
+    // ブルームフィルタへの登録をする
+    alert(this.state.inputData);
   }
 
   render() {
-    console.log(this.state.inputData)
     return (
       <div className="App">
         <h1>Bllom Filter Sample Application</h1>
-        <InputForm data="data" />
+        <InputForm value={this.state.inputData} onChange={this.change} onSubmit={this.submit}/>
         <CheckForm />
         <InitButton />
         <BllomFilter />
