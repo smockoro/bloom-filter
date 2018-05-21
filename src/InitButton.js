@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 
 class InitButton extends Component {
   render() {
     return (
       <div className="InitButton">
-       <button type="submit">InitButton</button>
+       <Button size='small' type='submit' color='secondary' variant="raised">Init Data</Button>
       </div>
     );
   }
