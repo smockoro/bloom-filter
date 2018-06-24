@@ -36,7 +36,8 @@ class App extends Component {
   initializer() {
     this.setState({
         bloomfilter : this.initBloomFilter(),
-        inputDataList : []
+        inputDataList : [],
+        involvedProb: 0.0
     })
   }
 
