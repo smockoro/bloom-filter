@@ -5,7 +5,7 @@ class InitButton extends Component {
   render() {
     return (
       <div className="InitButton">
-       <Button size='small' type='submit' color='secondary' variant="raised">Init Data</Button>
+       <Button size='small' type='submit' color='secondary' variant="raised" onClick={(e) => this.props.onClick() }>Init Data</Button>
       </div>
     );
   }
